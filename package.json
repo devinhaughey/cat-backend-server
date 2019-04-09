@@ -1,0 +1,30 @@
+{
+  "name": "cat-backend-server",
+  "version": "1.0.0",
+  "description": "Telia Backend home assignment, CAT REST API, Node.js, GraphQl, PostgreSQL",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pg": "^7.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devinhaughey/cat-backend-server.git"
+  },
+  "keywords": [
+    "REST",
+    "Node.js",
+    "Cats",
+    "Backend"
+  ],
+  "author": "dhaugh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devinhaughey/cat-backend-server/issues"
+  },
+  "homepage": "https://github.com/devinhaughey/cat-backend-server#readme"
+}

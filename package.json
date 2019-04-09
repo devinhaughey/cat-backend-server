@@ -4,8 +4,10 @@
   "description": "Telia Backend home assignment, CAT REST API, Node.js, GraphQl, PostgreSQL",
   "main": "server.js",
   "dependencies": {
+    "dotenv": "^7.0.0",
     "express": "^4.16.4",
-    "pg": "^7.9.0"
+    "pg": "^7.9.0",
+    "pg-promise": "^8.6.4"
   },
   "devDependencies": {},
   "scripts": {

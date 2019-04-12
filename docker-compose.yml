@@ -1,0 +1,40 @@
+version: '3'
+services:
+
+    db:
+        container_name: psql
+        restart: always
+        image: psql
+        build:
+            context: ./db
+        volumes:
+            - ./db/data/:/var/lib/postgresql/data
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: 1234
+            POSTGRES_DATABASE: cat_database
+        expose:
+            - 5432
+        ports:
+            - 5432:5432
+        networks:
+            - psql-backend_server       
+
+    app:
+        container_name: backend_server
+        build: .
+        links:
+            - db    
+        ports: 
+            - 5000:5000
+        environment:
+            DB_HOST: host.docker.internal   
+            DB_USER: postgres
+            DB_PASS: 1234
+            DB_DATABASE: cat_database
+            DATABASE_URL: postgres://postgres:1234@db:5432/cat_database
+        networks:
+            - psql-backend_server        
+
+networks:
+    psql-backend_server:   

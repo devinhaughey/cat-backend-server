@@ -12,6 +12,7 @@ const config = {
     password: process.env.POSTGRES_PASSWORD
 };
 
+// Sets the config to connect to the database.
 const db = pgp(config);
 
 exports.db = db;

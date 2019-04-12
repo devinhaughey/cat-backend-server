@@ -13,6 +13,7 @@ const config = {
 };
 
 // Sets the config to connect to the database.
-const db = pgp(config);
+const connection = 'postgres://postgres:1234@db:5432/cat_database';
+const db = pgp(connection);
 
 exports.db = db;

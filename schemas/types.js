@@ -1,15 +1,15 @@
 const graphql = require("graphql");
-const {GraphQLObjectType, GraphQLString, GraphQLInt} = graphql;
+const {GraphQLObjectType, GraphQLString, GraphQLID} = graphql;
 
 // Defining the shape of the types, matching the shape of the database table
 const BreedType = new GraphQLObjectType({
     name: "Breed",
     type: "Query",
     fields: {
-        id: {type: GraphQLString},
+        id: {type: GraphQLID},
         name: {type: GraphQLString},
         description: {type: GraphQLString},
-        imageurl: {type: GraphQLString},
+        image_url: {type: GraphQLString},
         temperament: {type: GraphQLString},
         origin: {type: GraphQLString}
     }
@@ -19,7 +19,7 @@ const FavoriteType = new GraphQLObjectType({
     name: "Favorites",
     type: "Query",
     fields: {
-        breedid: {type: GraphQLString}
+        breed_id: {type: GraphQLID}
     }
 });
 

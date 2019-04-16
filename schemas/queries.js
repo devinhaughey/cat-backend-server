@@ -72,7 +72,7 @@ const RootQuery = new GraphQLObjectType({
             args: {id: {type: GraphQLID}},
             description: "Queries for the favorite breed by the provided Id from the favorite table",
             resolve(parentValue, args) {
-                const query = `SELECT * FROM cat_schema.favorite_table WHERE breedid=$1`;
+                const query = `SELECT * FROM cat_schema.favorite_table WHERE breed_id=$1`;
                 const values = [args.id];
 
                 return db
@@ -80,7 +80,7 @@ const RootQuery = new GraphQLObjectType({
                     .then(res => {
                         // Queries the breed table to get the favorite breed information
                         const query = `SELECT * FROM cat_schema.breed_table WHERE id=$1`;
-                        const values = [res.breedid];
+                        const values = [res.breed_id];
 
                         return db
                             .one(query, values)

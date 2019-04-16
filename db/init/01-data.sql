@@ -120,7 +120,7 @@ INSERT INTO cat_schema.breed_table (id, name, description, image_url, temperamen
 ,(99,'Thai or Traditional, Classic, or Old-style Siamese','Short, Colorpoint','https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mimbi3.JPG/100px-Mimbi3.JPG','meh','Thailand')
 ;
 
-INSERT INTO cat_schema.favorite_table (breedid) VALUES
+INSERT INTO cat_schema.favorite_table (breed_id) VALUES
 (2),
 (44),
 (62);

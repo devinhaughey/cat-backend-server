@@ -16,8 +16,8 @@ COMMENT ON TABLE cat_schema.breed_table IS
 'Table that holds cat breeds defined on Wikipedia.';
 
 CREATE TABLE cat_schema.favorite_table (
-    breedid INTEGER NOT NULL REFERENCES cat_schema.breed_table(id)
+    breed_id INTEGER NOT NULL REFERENCES cat_schema.breed_table(id)
 );
 
 COMMENT ON TABLE cat_schema.favorite_table IS
-'Table that holds all of the facorite cat breeds.';
+'Table that holds all of the favorite cat breeds.';
